@@ -1,0 +1,31 @@
+.items-container{
+  width: 950px;
+  margin: 0px auto; 
+  display: flex;
+  flex-wrap: wrap;
+
+  .item-container{
+    border: solid 1px gray;
+    width: 250px;
+    margin: 40px auto;
+    position: relative;
+    .item-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        margin-top: 20px;
+      }
+    }
+    .item-design{
+      text-align: center;
+    }
+    .item-like-btn{
+      text-align: center;
+      margin-bottom: 5px;
+      .fas{
+        color: red;
+      }
+    }
+  }
+}

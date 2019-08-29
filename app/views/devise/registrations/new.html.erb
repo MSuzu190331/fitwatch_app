@@ -1,0 +1,51 @@
+<div class="user_contents">
+  <h2>Sign up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="user_contents--form">
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true, required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :nickname %><br />
+      <%= f.text_field :nickname, autofocus: true, required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "off", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :prefecture %><br />
+      <%= f.text_field :Prefectures, autofocus: true, required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_field :address, autofocus: true, required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", required: true %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up",class:"submit-btn" %>
+    </div>
+  </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>

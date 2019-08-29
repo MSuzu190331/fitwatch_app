@@ -1,0 +1,66 @@
+.user_contents{
+  height: 100%;
+  background-color: gray;
+  width: 70%;
+  text-align: center;
+  margin: 100px auto;
+  padding-bottom: 50px;
+  color: white;
+  &--form{
+    .field{
+      margin: 30px 0;
+      input{
+        width: 350px;
+        height: 40px;
+      }
+      #user_remember_me{
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .actions{
+      padding: 20px;
+      .submit-btn{
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
+        border: solid 1px;
+        color: gray;
+      }
+      // .password-submit-btn{
+      //   width: 400px;
+      //   height: 50px;
+      //   font-size: 20px;
+      //   padding: 7px  61px 7px 61px;
+      // }
+    }
+  }
+  h2{
+    font-weight: bold;
+    background-color: white;
+    border: solid 1px;
+    padding: 20px;
+    font-size: 25px;
+    color: black;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  .other-links{
+    .btn.other-link--btn{
+      height: 50px;
+      width: 200px;
+      background-color: white;
+      color: gray;
+      padding: 7px  61px 7px 61px;
+      font-size: 20px;
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .forget-link--btn{
+      display: block;
+    }
+  }
+}

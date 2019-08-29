@@ -1,0 +1,17 @@
+.wrapper{
+  height: 100vh;
+  .main{
+    .success-container{
+      width: 100%;
+      .success{
+        margin:100px auto;
+        height:200px;
+        width:100%;
+        background-color: gray;
+        color: white;
+        line-height: 200px;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.new_post_container{
+  width: 60%;
+  margin: 0px auto;
+  background-color: gray;
+  height: 120vh;
+  overflow: scroll;
+  .new_post-header{
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    border: solid 1px;
+    background-color: white;
+    p{
+      color: gray;font-size: 20px;
+
+    }
+  }
+  .new_post-form{
+    margin-top: 30px;
+    margin: 10px auto;
+    .input-form{
+      color: white;
+      margin:50px auto;
+      width: 500px;
+      .form_name{
+        display: block;
+        margin-top: 10px;
+        margin: 5px auto;
+        width: 500px;
+      }
+      .form_image{
+        display:block;
+        height: 100px;
+        margin: 5px auto;
+      }
+      .form_design{
+        display:block;
+        margin: 5px auto;
+        width: 500px;
+      }
+      .form_about{
+        display:block;
+        margin: 5px auto;
+        height: 300px;
+        width: 500px;
+      }
+      .form_send-button{
+        display:block;
+        margin: 5px auto;
+      }
+    }
+  }
+}

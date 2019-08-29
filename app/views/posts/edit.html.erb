@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="main">
+    <%= render 'header' %>
+      <div class="new_post_container">
+        <div class="new_post-header">
+          <p>Post your favorite watch</p>
+        </div>
+        <div class="new_post-form">
+          <%= form_for(@post) do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+          <div class="input-form">
+            <%= f.label :image, "・image", class: "form_image" %>
+              <%= f.file_field :image, class: "form_image"%>
+              <p>・design</p>
+            <%= f.text_field :design, class: "form_design" %>
+              <p>・about</p>
+            <%= f.text_area :about, :maxlength => "100", class:"form_about" %>
+            <%= f.submit "Send", class:"form_send-button" %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+

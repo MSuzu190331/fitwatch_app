@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="main">
+    <%= render 'header' %>
+      <div class="main-container">
+        <div class="ranking-container">
+          <% num = 0 %>
+          <% @posts.each do |post| %>
+          <div class= "ranking_post">
+          <% num+= 1 %>
+            <div class="ranking_order">
+              <% if num==1 %>
+                <i class="fas fa-crown"></i>
+                <%= "no.#{num}" %>
+              <% else %>
+                <%= "no.#{num}" %>
+              <% end %>
+            </div>
+            <%= link_to post_path(post.id), class: "post-image" do %>
+              <%= image_tag post.image.to_s %>
+            <% end %>
+            <div class= "like-btn">
+              <i class="fas fa-heart"></i>
+              <h3><%= post.liked_users.count %></h3>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <%= link_to "more", ranking_posts_path, class:"ranking-more-button" %>
+      </div>
+  </div>
+</div>
