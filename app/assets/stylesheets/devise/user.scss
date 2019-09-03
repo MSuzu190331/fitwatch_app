@@ -18,6 +18,13 @@
         height: 20px;
       }
     }
+    #error_explanation{
+      h2{
+        font-size: 15px;
+        background-color: #CC0000;
+        color: white;
+      }
+    }
     .actions{
       padding: 20px;
       .submit-btn{
