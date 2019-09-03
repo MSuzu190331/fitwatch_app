@@ -3,8 +3,8 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.joins(:likes).group('post_id').order('count(likes.user_id) desc')
     #  @posts = Post.order("created_at DESC").limit(5)
-     post_ids = Like.group(:post_id).order('count_post_id DESC').limit(5).count(:post_id).keys
-     @posts = post_ids.map { |id| Post.find(id) }
+    post_ids = Like.group(:post_id).order('count_post_id DESC').limit(5).count(:post_id).keys
+    @posts = post_ids.map { |id| Post.find(id) }
   end
 
   def item
