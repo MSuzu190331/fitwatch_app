@@ -10,11 +10,11 @@
           <%= render 'layouts/error_messages', model: f.object %>
           <div class="input-form">
             <%= f.label :image, "・image", class: "form_image" %>
-              <%= f.file_field :image, class: "form_image"%>
+              <%= f.file_field :image, class: "form_image", required: true %>
               <p>・design</p>
-            <%= f.text_field :design, class: "form_design" %>
+            <%= f.text_field :design, class: "form_design", required: true %>
               <p>・about</p>
-            <%= f.text_area :about, :maxlength => "100", class:"form_about" %>
+            <%= f.text_area :about, :maxlength => "100", class:"form_about", required: true %>
             <%= f.submit "Send", class:"form_send-button" %>
           <% end %>
           </div>
