@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'posts#index'
   get '/posts' => 'posts#index'
 
+  resources :users, only: :show
   resources :posts do
     collection do
       get 'item'

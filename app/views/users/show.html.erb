@@ -1,0 +1,59 @@
+<div class="wrapper">
+  <div class="main">
+    <%= render 'posts/header' %>
+    <div class="user-container">
+
+      <p><%= @nickname %>さんの投稿一覧</p>
+      <div class="items-container">
+      <% if @posts.present? %>
+        <% @posts.each do |post| %>
+        <div class="item-container">
+          <div class="item-image">
+            <%= link_to post_path(post.id) do %>
+              <%= image_tag post.image.url, :size =>'200x250'%>
+            <% end %>
+          </div>
+          <div class="item-design">
+            <%= post.design %>
+          </div>
+          <div class="item-like-btn">
+            <i class="fas fa-heart"></i>
+            <%= post.liked_users.count %>
+          </div>
+        </div>
+        <% end %>
+      <% else %>
+        <div class="item-container">
+          <p>投稿はありません</p>
+        </div>
+      <% end %>
+      </div>
+
+      <p><%= @nickname %>さんのいいね一覧</p>
+      <div class="items-container">
+      <% if @likes.present? %>
+        <% @likes.each do |like| %>
+        <div class="item-container">
+          <div class="item-image">
+            <%= link_to post_path(like.post.id) do %>
+              <%= image_tag like.post.image.url, :size =>'200x250'%>
+            <% end %>
+          </div>
+          <div class="item-design">
+            <%= like.post.design %>
+          </div>
+          <div class="item-like-btn">
+            <i class="fas fa-heart"></i>
+            <%= like.post.liked_users.count %>
+          </div>
+        </div>
+        <% end %>
+      <% else %>
+        <div class="item-container">
+          <p>投稿はありません</p>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
