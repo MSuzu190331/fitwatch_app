@@ -10,6 +10,7 @@
               <%= render partial: "likes/like", locals: { post: @post } %>
             </div>
             <h3><%= @post.user.nickname %></h3>
+            <h3><%= @post.name_id %></h3>
           </div>
           <%= link_to "編集", edit_post_path(@post.id), class:"patch_button" %>
           <%= link_to "削除", post_path(@post.id), method: :delete, class:"delete_button" %>
