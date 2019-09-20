@@ -11,6 +11,7 @@
           <div class="input-form">
             <%= f.label :image, "・image", class: "form_image" %>
               <%= f.file_field :image, class: "form_image", required: true %>
+            <%= f.label :design, "・design", class: "form_design" %>
               <%= f.collection_select :name_id, Design.all, :id, :name, prompt: "--", class: "form_design", required: true %>
               <p>・about</p>
             <%= f.text_area :about, :maxlength => "100", class:"form_about", required: true %>
