@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
   def ranking
     # @posts = Post.joins(:likes).group(:post_id).order('count(likes.user_id) desc')
-    post_ids = Like.group(:post_id).order('count_post_id DESC').limit(5).count(:post_id).keys
+    post_ids = Like.group(:post_id).order('count_post_id DESC').count(:post_id).keys
     @posts = post_ids.map { |id| Post.find(id) }
   end
 
