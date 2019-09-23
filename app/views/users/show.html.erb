@@ -2,8 +2,9 @@
   <div class="main">
     <%= render 'posts/header' %>
     <div class="user-container">
-
-      <p><%= @nickname %>さんの投稿一覧</p>
+      <div class="user-container--user-posts">
+        <p><%= @nickname %>さんの投稿一覧</p>
+      </div>
       <div class="items-container">
       <% if @posts.present? %>
         <% @posts.each do |post| %>
@@ -29,7 +30,9 @@
       <% end %>
       </div>
 
-      <p><%= @nickname %>さんのいいね一覧</p>
+      <div class="user-container--user-posts">
+        <p><%= @nickname %>さんのいいね一覧</p>
+      </div>
       <div class="items-container">
       <% if @likes.present? %>
         <% @likes.each do |like| %>
