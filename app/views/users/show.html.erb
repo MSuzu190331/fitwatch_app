@@ -14,7 +14,7 @@
             <% end %>
           </div>
           <div class="item-design">
-            <%= post.design %>
+            <%= Design.find(post.name_id).name %>
           </div>
           <div class="item-like-btn">
             <i class="fas fa-heart"></i>
@@ -40,7 +40,7 @@
             <% end %>
           </div>
           <div class="item-design">
-            <%= like.post.design %>
+            <%= Design.find(like.post.name_id).name %>
           </div>
           <div class="item-like-btn">
             <i class="fas fa-heart"></i>
