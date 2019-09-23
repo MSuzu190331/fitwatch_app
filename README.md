@@ -1,6 +1,16 @@
 # アプリ説明
 時計のコーディネイトおよびレビュー投稿アプリです。
+以下moqupsで作成したサイトのイメージ画像になります。（設計段階のイメージのため変更あり）
+
+#### トップページ
 <img width="551" alt="fitwatch-design3" src="https://user-images.githubusercontent.com/49112822/65421229-329d0280-de3e-11e9-867c-f98583f5faf7.png">
+
+#### 一覧ページ
+<img width="549" alt="fitwatch-design" src="https://user-images.githubusercontent.com/49112822/65421631-2b2a2900-de3f-11e9-881a-8476ffb08b33.png">
+
+#### 投稿ページ
+<img width="549" alt="fitwatch-design2" src="https://user-images.githubusercontent.com/49112822/65421651-3bda9f00-de3f-11e9-88d1-775ebafbbe4c.png">
+
 
 
 # アプリのURL
