@@ -1,5 +1,7 @@
 # アプリ説明
 時計のコーディネイトおよびレビュー投稿アプリです。
+<img width="551" alt="fitwatch-design3" src="https://user-images.githubusercontent.com/49112822/65421229-329d0280-de3e-11e9-867c-f98583f5faf7.png">
+
 
 # アプリのURL
 https://fit-watch-app.herokuapp.com/
