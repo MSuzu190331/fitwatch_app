@@ -1,6 +1,6 @@
 # アプリ説明
 時計のコーディネイトおよびレビュー投稿アプリです。
-以下moqupsで作成したサイトのイメージ画像になります。（設計段階のイメージのため変更あり）
+以下アプリの参照画像になります。（設計段階のイメージのため変更あり）
 
 - DB設計
 ![Database ER Diagram Example (Crow's Foot)](https://user-images.githubusercontent.com/49112822/65482771-0da79e80-ded5-11e9-8af5-87e4f4392a84.jpeg)
@@ -20,7 +20,7 @@
 https://fit-watch-app.herokuapp.com/
 
 # 開発環境
-Ruby、JavaScript、Ruby on Rails、VScode、MySQL（開発環境）、PostgreSQL（本番環境）、MacOS
+Ruby、JavaScript、Ruby on Rails、VScode、MySQL（開発環境）、PostgreSQL（本番環境）、moqups、Lucidchart、MacOS
 
 # 使い方概要
 - テストユーザー向けのアカウント
