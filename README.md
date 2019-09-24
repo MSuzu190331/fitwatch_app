@@ -2,6 +2,9 @@
 時計のコーディネイトおよびレビュー投稿アプリです。
 以下moqupsで作成したサイトのイメージ画像になります。（設計段階のイメージのため変更あり）
 
+- DB設計
+![Database ER Diagram Example (Crow's Foot)](https://user-images.githubusercontent.com/49112822/65482771-0da79e80-ded5-11e9-8af5-87e4f4392a84.jpeg)
+
 - トップページ
 <img width="551" alt="fitwatch-design3" src="https://user-images.githubusercontent.com/49112822/65421229-329d0280-de3e-11e9-867c-f98583f5faf7.png">
 
