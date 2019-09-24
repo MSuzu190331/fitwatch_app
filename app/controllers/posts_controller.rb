@@ -45,10 +45,11 @@ class PostsController < ApplicationController
     end
   end
 
-
   def show
     @post = Post.find(params[:id])
     @like= Like.new
+    @comments = @post.comments
+    @comment = Comment.new
   end
 
   private

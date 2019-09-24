@@ -4,46 +4,111 @@
       text-align: center;
       background-color: gray;
       width: 60%;
-      height: 800px;
-      margin: 0px auto;
-      padding-top: 50px;
+      height: 100%;
+      margin: 0px auto 50px auto;
+      padding: 50px 0px 100px 0px;
       position: relative; 
       &-details{
         height: 150px;
-        width: 600px;
+        width: 70%;
         background-color: white;
-        margin: 10px auto;
+        margin: 10px auto 10px auto;
+        padding: 10px 20px;
+        position: relative;
+        &--design{
+          border-bottom: solid 1px lightgrey;
+          padding-bottom: 5px;
+        }
+        p{
+          text-align: left;
+        }
         h3{
           color: gray;
+          text-align: right;
+          position: absolute;
+          right: 20px;
+          bottom: 10px;
         }
         .likes_buttons{
-          display: inline;
+          position: absolute;
+          bottom: 5px;
+          left: 35%;
+          // display: inline;
           a{
             color: black;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 25px;
             .fas, .far{
               color: red;
             }
           }
         }
-      }
-      .patch_button{
-        color: white;
-        text-decoration: none;
-      }
-      .delete_button{
-        color: white;
-        text-decoration: none;
+        .patch_button{
+          background-color: white;
+          color: gray;
+          text-decoration: none;
+          font-size: 15px;
+          margin: 5px 0px;
+          padding: 2px 10px;
+          border: solid 1px gray;
+          position: absolute;
+          bottom: 0px;
+          left: 45%;
+        }
+        .delete_button{
+          background-color: white;
+          color: gray;
+          text-decoration: none;
+          font-size: 15px;
+          margin: 5px 0px;
+          padding: 2px 10px;
+          border: solid 1px gray;
+          position: absolute;
+          bottom: 0px;
+          left: 55%;
+        }
       }
       .back_button{
         display: block;
         color: white;
         text-decoration: none;
+        margin-top: 20px;
         position: absolute;
         left: 0;
         right: 0;
         bottom: 10px;
+      }
+      &-comments{
+        padding: 10px 20px;
+        width: 70%;
+        background-color: white;
+        margin: 0 auto;
+        .comment-message{
+          margin-top: 10px;
+          text-align: left;
+        }
+        .comment-name{
+          text-align: right;
+          border-bottom: 1px solid lightgray;
+          padding-bottom: 5px;
+        }
+        .show_post_comment-form{
+          padding-top: 20px;
+          .comment_form{
+            margin: 0 auto;
+            height: 50px;
+            width: 90%;
+          }
+          .comment_form--send-btn{
+            display: block;
+            margin: 10px auto 5px auto;
+            padding: 2px 10px;
+            font-size: 15px;
+            border-style: none;
+            border: solid 1px gray;
+            color: gray;
+          }
+        }
       }
     }
   }

@@ -2,18 +2,31 @@
   <div class="main">
     <%= render 'header' %>
       <div class="show_post_container">
-        <div class= "show_post_container--item">
+        <div class="show_post_container--item">
           <%= image_tag @post.image.url %>
-          <div class= "show_post_container--item-details">
-            <h3><%= @post.about %></h3>
+          <div class="show_post_container--item-details">
+            <div class="show_post_container--item-details--design">
+              <%= Design.find(@post.name_id).name %>
+            </div>
+            <p><%= @post.about %></p>
             <div id="likes_buttons_<%= @post.id %>", class="likes_buttons">
               <%= render partial: "likes/like", locals: { post: @post } %>
             </div>
             <h3><%= @post.user.nickname %></h3>
+            <%= link_to "編集", edit_post_path(@post.id), class:"patch_button" %>
+            <%= link_to "削除", post_path(@post.id), method: :delete, class:"delete_button" %>
           </div>
-          <%= link_to "編集", edit_post_path(@post.id), class:"patch_button" %>
-          <%= link_to "削除", post_path(@post.id), method: :delete, class:"delete_button" %>
           <%= link_to "戻る", posts_path, class:"back_button" %>
+          <div class= "show_post_container--item-comments">
+          <h3>コメント</h3>
+          <% @comments.each do |comment| %>
+            <div class="comment-message"><%= comment.message %></div>
+            <div class="comment-name"><%= comment.user.nickname %></div>
+          <% end %>
+            <div class="show_post_comment-form">
+              <%= render partial: "comments/comment", locals: { post: @post } %>
+            </div>
+          </div>
         </div>
       </div>
   </div>

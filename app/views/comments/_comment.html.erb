@@ -1,0 +1,6 @@
+<% if current_user %>
+  <%= form_for @comment, url: post_comments_path(post.id) do |f| %>
+    <%= f.text_field :message, :maxlength => "300", class:"comment_form", required: true %>
+    <%= f.submit "Send", class:"comment_form--send-btn" %>
+  <% end %>
+<% end %>

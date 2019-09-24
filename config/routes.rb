@@ -4,13 +4,15 @@ Rails.application.routes.draw do
   root 'posts#index'
   get '/posts' => 'posts#index'
 
-  resources :users, only: :show
+  resources :users, only: [:show]
+
   resources :posts do
     collection do
       get 'item'
       get 'ranking'
     end
     resources :likes, only: [:create, :destroy]
-    end
+    resources :comments, only: [:create]
+  end
 
 end
