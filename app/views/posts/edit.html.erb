@@ -14,7 +14,7 @@
             <%= f.label :name_id, "・design", class: "form_design" %>
               <%= f.collection_select :name_id, Design.all, :id, :name, prompt: "--", class: "form_design", required: true %>
               <p>・about</p>
-            <%= f.text_area :about, :maxlength => "100", class:"form_about" %>
+            <%= f.text_area :about, :maxlength => "300", class:"form_about" %>
             <%= f.submit "Send", class:"form_send-button" %>
           <% end %>
           </div>

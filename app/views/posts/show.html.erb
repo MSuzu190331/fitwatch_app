@@ -9,28 +9,50 @@
               <div id="likes_buttons_<%= @post.id %>", class="likes_buttons">
                 <%= render partial: "likes/like", locals: { post: @post } %>
               </div>
+              <div class="comments-buttons">
+                <i class="far fa-comment-dots"></i><%= @post.comments.count %>
+              </div>
             </div>
             <div class="show_post_container--item-details--design">
               <%= Design.find(@post.name_id).name %>
             </div>
-            <p><%= @post.about %></p>
+            <div class="show_post_container--item-details--about">
+              <%= @post.about %>
+            </div>
             <h3><%= @post.user.nickname %></h3>
             <% if user_signed_in? && current_user.id == @post.user_id %>
-              <%= link_to "編集", edit_post_path(@post.id), class:"patch_button" %>
-              <%= link_to "削除", post_path(@post.id), method: :delete, class:"delete_button" %>
+              <%= link_to "Edit", edit_post_path(@post.id), class:"patch_button" %>
+              <%= link_to "Delete", post_path(@post.id), method: :delete, class:"delete_button" %>
             <% end %>
           </div>
-          <%= link_to "戻る", posts_path, class:"back_button" %>
+          <%= link_to "Back", posts_path, class:"back_button" %>
+
           <div class= "show_post_container--item-comments">
-          <h3>コメント</h3>
-          <% @comments.each do |comment| %>
-            <div class="comment-message"><%= comment.message %></div>
-            <div class="comment-name"><%= comment.user.nickname %></div>
-          <% end %>
+            <h3>コメント</h3>
+            <% @comments.each do |comment| %>
+            <div class="show_post_container--item-comments--list">
+              <div class="comment-message">
+                <%= comment.message %>
+              </div>
+              <div class="comment-name">
+                <%= comment.user.nickname %>
+              </div>
+              <% if user_signed_in? && current_user.id == comment.user_id %>
+                <div class="comment-delete">
+                  <%= link_to post_comment_path(comment.post_id,comment.id), method: :delete do %>
+                    <i class="fas fa-trash-alt"></i>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+            <% end %>
             <div class="show_post_comment-form">
               <%= render partial: "comments/comment", locals: { post: @post } %>
             </div>
           </div>
+
+
+
         </div>
       </div>
   </div>
