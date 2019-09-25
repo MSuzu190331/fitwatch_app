@@ -8,13 +8,14 @@ class PostsController < ApplicationController
   end
 
   def item
-    @posts = Post.order("created_at DESC")
+    @posts = Post.order("created_at DESC").page(params[:page]).per(9)
   end
 
   def ranking
     # @posts = Post.joins(:likes).group(:post_id).order('count(likes.user_id) desc')
     post_ids = Like.group(:post_id).order('count_post_id DESC').count(:post_id).keys
-    @posts = post_ids.map { |id| Post.find(id) }
+    posts = post_ids.map { |id| Post.find(id) }
+    @posts = Kaminari.paginate_array(posts).page(params[:page]).per(9)
   end
 
   def new

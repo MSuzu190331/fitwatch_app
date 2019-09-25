@@ -29,3 +29,16 @@
     }
   }
 }
+.pagination-bar{
+  .pagination{
+    text-align: center;
+    margin: 0px auto 20px auto;
+    span{
+      a{
+        text-decoration: none;
+        font-size: 15px;
+        color: gray;
+      }
+    }
+  }
+}
