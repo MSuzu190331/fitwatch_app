@@ -2,8 +2,7 @@
   width: 60%;
   margin: 0px auto;
   background-color: gray;
-  height: 120vh;
-  overflow: scroll;
+  height: 100vh;
   .new_post-header{
     text-align: center;
     line-height: 50px;
@@ -36,7 +35,10 @@
       .form_design{
         display:block;
         margin: 5px auto;
+      }
+      #post_name_id{
         width: 500px;
+        height: 40px;
       }
       .form_about{
         display:block;
@@ -46,7 +48,13 @@
       }
       .form_send-button{
         display:block;
-        margin: 5px auto;
+        background-color: white;
+        color: gray;
+        text-decoration: none;
+        font-size: 15px;
+        margin: 20px auto;
+        padding: 5px 15px;
+        border: solid 1px gray;
       }
     }
   }
