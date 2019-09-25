@@ -1,23 +1,6 @@
 <div class="wrapper">
   <div class="main">
     <%= render 'header' %>
-      <div class="items-container">
-        <% @posts.each do |post| %>
-        <div class="item-container">
-          <div class="item-image">
-            <%= link_to post_path(post.id) do %>
-              <%= image_tag post.image.url, :size =>'200x250'%>
-            <% end %>
-          </div>
-          <div class="item-design">
-            <%= Design.find(post.name_id).name %>
-          </div>
-          <div class="item-like-btn">
-            <i class="fas fa-heart"></i>
-            <%= post.liked_users.count %>
-          </div>
-        </div>
-        <% end %>
-      </div>
+      <%= render 'all_items' %>
   </div>
 </div>
