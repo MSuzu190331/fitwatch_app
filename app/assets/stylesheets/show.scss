@@ -9,15 +9,15 @@
       padding: 50px 0px 100px 0px;
       position: relative; 
       &-details{
-        height: 150px;
+        height: 180px;
         width: 70%;
         background-color: white;
         margin: 10px auto 10px auto;
         padding: 10px 20px;
         position: relative;
         &--design{
-          border-bottom: solid 1px lightgrey;
-          padding-bottom: 5px;
+          border-top: solid 1px lightgrey;
+          padding: 5px 0px;
         }
         p{
           text-align: left;
@@ -29,17 +29,16 @@
           right: 20px;
           bottom: 10px;
         }
-        .likes_buttons{
-          position: absolute;
-          bottom: 5px;
-          left: 35%;
-          // display: inline;
-          a{
-            color: black;
-            text-decoration: none;
-            font-size: 22px;
-            .fas, .far{
-              color: red;
+        .likes-comments{
+          .likes_buttons{
+
+            a{
+              color: black;
+              text-decoration: none;
+              font-size: 22px;
+              .fas, .far{
+                color: red;
+              }
             }
           }
         }
@@ -49,11 +48,11 @@
           text-decoration: none;
           font-size: 15px;
           margin: 5px 0px;
-          padding: 2px 10px;
+          padding: 2px 15px;
           border: solid 1px gray;
           position: absolute;
           bottom: 0px;
-          left: 45%;
+          left: 38%;
         }
         .delete_button{
           background-color: white;
@@ -61,11 +60,11 @@
           text-decoration: none;
           font-size: 15px;
           margin: 5px 0px;
-          padding: 2px 10px;
+          padding: 2px 15px;
           border: solid 1px gray;
           position: absolute;
           bottom: 0px;
-          left: 55%;
+          left: 52%;
         }
       }
       .back_button{
