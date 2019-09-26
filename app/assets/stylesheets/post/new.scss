@@ -2,7 +2,7 @@
   width: 60%;
   margin: 0px auto;
   background-color: gray;
-  height: 100vh;
+  height: 100%;
   .new_post-header{
     text-align: center;
     line-height: 50px;
@@ -21,6 +21,11 @@
       color: white;
       margin:50px auto;
       width: 500px;
+      #image_prev{
+        margin: 5px 50px;
+        max-height: 450px;
+        max-width: 450px;
+      }
       .form_name{
         display: block;
         margin-top: 10px;
@@ -29,7 +34,7 @@
       }
       .form_image{
         display:block;
-        height: 100px;
+        height: 50px;
         margin: 5px auto;
       }
       .form_design{

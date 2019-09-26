@@ -9,12 +9,17 @@
           <%= form_for(@post) do |f| %>
           <%= render 'layouts/error_messages', model: f.object %>
           <div class="input-form">
-            <%= f.label :image, "・Image", class: "form_image" %>
-              <%= f.file_field :image, class: "form_image", required: true %>
-            <%= f.label :design, "・Design", class: "form_design" %>
-              <%= f.collection_select :name_id, Design.all, :id, :name, prompt: "--", class: "form_design", required: true %>
-              <p>・About</p>
-            <%= f.text_area :about, :maxlength => "300", class:"form_about", required: true %>
+            <p>・Image</p>
+            <% if @post.image? %>
+              <%= image_tag @post.image.url, id: :image_prev  %>
+            <% else %>
+              <%= image_tag "/no-image.png", id: :image_prev  %>
+            <% end %>
+            <%= f.file_field :image, id: :form_image %>
+            <p>・Design</p>
+            <%= f.collection_select :name_id, Design.all, :id, :name, prompt: "--", class: "form_design", required: true %>
+            <p>・About</p>
+            <%= f.text_area :about, :maxlength => "300", class:"form_about" %>
             <%= f.submit "Send", class:"form_send-button" %>
           <% end %>
           </div>
