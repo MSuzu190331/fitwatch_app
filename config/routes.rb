@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     collection do
       get 'item'
       get 'ranking'
+      get 'search'
     end
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]

@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 
   def item
     @posts = Post.order("created_at DESC").page(params[:page]).per(9)
+    @post = Post.new
   end
 
   def ranking
@@ -14,6 +15,11 @@ class PostsController < ApplicationController
     posts = post_ids.map { |id| Post.find(id) }
     @posts = Kaminari.paginate_array(posts).page(params[:page]).per(9)
   end
+
+  def search
+    @posts = Post.search(params[:search]).page(params[:page]).per(9)
+  end
+
 
   def new
     @post = Post.new
