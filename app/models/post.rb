@@ -13,10 +13,10 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   def self.search(search)
-    # return Post.all unless search
-    # Post.find_by(name_id: search)
     return Post.all unless search
-    Post.where(['name_id LIKE ?', "%#{search}%"])
+    Post.where(name_id: search)
+    # return Post.all unless search
+    # Post.where(['name_id LIKE ?', "%#{search}%"])
   end
 
 end
