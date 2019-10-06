@@ -1,0 +1,16 @@
+<div class="user_login_select">
+  <div class="user_login_select--contents">
+    <div class="select_email">
+      <%= link_to "メールアドレスで登録する",new_user_session_path %>
+    </div>
+    <div class="select_sns--facebook">
+      <%= link_to "Facebookと連携する", user_facebook_omniauth_authorize_path %>
+    </div>
+    <div class="select_sns--twitter">
+      <%= link_to "Twitterと連携する", user_twitter_omniauth_authorize_path %>
+    </div>
+    <div class="select_sns--google">
+      <%= link_to "Googleと連携する", user_google_oauth2_omniauth_authorize_path %>
+    </div>
+  </div>
+</div>
