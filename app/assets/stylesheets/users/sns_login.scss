@@ -1,0 +1,65 @@
+.user_login_select--contents{
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px; 
+    text-align: center;
+    line-height: 50px;
+  }
+  .select_email{
+    height: 50px;
+    width: 350px;
+    background-color: #ea352d;
+    margin: 20px auto;
+    position: relative;
+    .fa-envelope{
+      color: white;
+      font-size: 25px;
+      position: absolute;
+      left: 20px;
+      top: 10px;
+    }
+  }
+  .select_sns--facebook{
+    height: 50px;
+    width: 350px;
+    background-color: #305097;
+    margin: 20px auto;
+    position: relative;
+    .fa-facebook-square{
+      color: white;
+      font-size: 25px;
+      position: absolute;
+      left: 20px;
+      top: 10px;
+    }
+  }
+  .select_sns--twitter{
+    height: 50px;
+    width: 350px;
+    background-color: #00aced;
+    margin: 20px auto;
+    position: relative;
+    .fa-twitter-square{
+      color: white;
+      font-size: 25px;
+      position: absolute;
+      left: 20px;
+      top: 10px;
+    }
+  }
+  .select_sns--google{
+    height: 50px;
+    width: 350px;
+    background-color: #db4a39;
+    margin: 20px auto;
+    position: relative;
+    .fa-google{
+      color: white;
+      font-size: 25px;
+      position: absolute;
+      left: 20px;
+      top: 10px;
+    }
+  }
+}
