@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get '/posts' => 'posts#index'
 
   resources :users, only: [:show, :new]
-
   resources :posts do
     collection do
       get 'item'
