@@ -12,21 +12,21 @@ describe Post do
       user = create(:user)
       post = build(:post, about: "")
       post.valid?
-      expect(post.errors[:about]).to include("が入力されていません。")
+      expect(post.errors[:about]).to include("を入力してください")
     end
 
     it "is invalid without a image(画像の入力がないと無効)" do
       user = create(:user)
       post = build(:post, image: "")
       post.valid?
-      expect(post.errors[:image]).to include("が入力されていません。")
+      expect(post.errors[:image]).to include("を入力してください")
     end
 
     it "is invalid without a design(時計デザインの入力がないと無効)" do
       user = create(:user)
       post = build(:post, name_id: "")
       post.valid?
-      expect(post.errors[:name_id]).to include("が入力されていません。")
+      expect(post.errors[:name_id]).to include("を入力してください")
     end
 
   end

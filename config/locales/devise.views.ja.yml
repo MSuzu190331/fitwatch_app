@@ -25,6 +25,10 @@ ja:
         current_password: "現在のパスワード"
         email: "メールアドレス"
         password: "パスワード"
+        name: "名前"
+        nickname: "ニックネーム"
+        Prefectures: "都道府県"
+        address: "住所"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
     models:
