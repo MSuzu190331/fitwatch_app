@@ -42,7 +42,7 @@ group :development, :test do
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'rails-controller-testing'p
+  gem 'rails-controller-testing'
 end
 
 group :development do
