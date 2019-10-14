@@ -15,11 +15,11 @@
             <% else %>
               <%= image_tag "/no-image.png", id: :image_prev  %>
             <% end %>
-            <%= f.file_field :image, id: :form_image, required: true %>
+            <%= f.file_field :image, id: :form_image %>
             <p>・Design</p>
-            <%= f.collection_select :name_id, Design.all, :id, :name, prompt: "--", class: "form_design", required: true %>
+            <%= f.collection_select :name_id, Design.all, :id, :name, prompt: "--", class: "form_design" %>
             <p>・About</p>
-            <%= f.text_area :about, :maxlength => "300", class:"form_about", required: true %>
+            <%= f.text_area :about, :maxlength => "300", class:"form_about" %>
             <%= f.submit "Send", class:"form_send-button" %>
           <% end %>
           </div>

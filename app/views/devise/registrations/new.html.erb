@@ -6,27 +6,27 @@
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field">
       <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, required: true, autocomplete:"off" %>
+      <%= f.text_field :name, autofocus: true, autocomplete:"off" %>
     </div>
 
     <div class="field">
       <%= f.label :nickname %><br />
-      <%= f.text_field :nickname, autofocus: true, required: true, autocomplete:"off" %>
+      <%= f.text_field :nickname, autofocus: true, autocomplete:"off" %>
     </div>
 
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete:"off", required: true %>
+      <%= f.email_field :email, autofocus: true, autocomplete:"off" %>
     </div>
 
     <div class="field">
-      <%= f.label :prefecture %><br />
-      <%= f.text_field :Prefectures, autofocus: true, required: true %>
+      <%= f.label :Prefectures %><br />
+      <%= f.text_field :Prefectures, autofocus: true  %>
     </div>
 
     <div class="field">
       <%= f.label :address %><br />
-      <%= f.text_field :address, autofocus: true, required: true %>
+      <%= f.text_field :address, autofocus: true %>
     </div>
 
     <div class="field">
@@ -34,12 +34,12 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "off", required: true %>
+      <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off", required: true %>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
     <div class="actions">

@@ -42,11 +42,17 @@ Ruby、JavaScript、Ruby on Rails、VScode、MySQL（開発環境）、PostgreSQ
 - いいね機能（詳細ページにてハートをクリック）
 - ランキング機能（いいねの多い順表示）
 - コメント機能
+- SNS認証(開発環境のみ)
+- カテゴリー別機能検索
 
 
 # 実装予定機能
-- SNS認証
-- カテゴリー別機能検索
 - 検索機能
+- ユーザーページ（編集、削除）
 
 
+# 単体テスト
+- userモデルバリデーションテスト
+- postモデルバリデーションテスト
+- postコントローラーテスト(edit,new)
+<img width="1330" alt="スクリーンショット 2019-10-15 0 27 50" src="https://user-images.githubusercontent.com/49112822/66763642-31ae3c80-eee3-11e9-8d51-0187975e4694.png">

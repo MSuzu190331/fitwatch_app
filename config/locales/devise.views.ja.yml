@@ -9,6 +9,7 @@ ja:
               taken: "はすでに登録されています。"
             password:
               blank: "が入力されていません。"
+              too_short: "は６文字以上で入力してください。"
             name:
               blank: "が入力されていません。"
             nickname:
@@ -17,11 +18,17 @@ ja:
               blank: "が入力されていません。"
             address:
               blank: "が入力されていません。"
+            password_confirmation:
+              confirmation: "がパスワードと一致しません。"
     attributes:
       user:
         current_password: "現在のパスワード"
         email: "メールアドレス"
         password: "パスワード"
+        name: "名前"
+        nickname: "ニックネーム"
+        Prefectures: "都道府県"
+        address: "住所"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
     models:
