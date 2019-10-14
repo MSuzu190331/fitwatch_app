@@ -5,7 +5,7 @@ describe Post do
     it "is valid with a about, image, design(詳細、画像、デザインの入力があると登録ができる)" do
       user = create(:user)
       post = build(:post)
-      expect(user).to be_valid
+      expect(post).to be_valid
     end
 
     it "is invalid without a about(時計詳細の入力がないと無効)" do
