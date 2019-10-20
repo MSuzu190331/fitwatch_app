@@ -27,7 +27,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    binding.pry
     unless @post.save
       render 'new'
     end
