@@ -1,9 +1,7 @@
 $(document).on('turbolinks:load',function(){
 
   if($(this).length){
-    console.log(1)
     $('.ranking-more-button').hide().slideDown(1000);
-    console.log(2)
   }
   
   $(document).ready(function(){
