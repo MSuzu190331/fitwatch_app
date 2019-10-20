@@ -45,6 +45,14 @@
               font-size: 25px;
               .fas, .far{
                 color: red;
+                display: inline-block;
+                transition: .3s;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+              }
+              .fas:hover{
+                -webkit-transform: scale(1.3);
+                transform: scale(1.3);
               }
             }
           }
@@ -152,6 +160,10 @@
             border-style: none;
             border: solid 1px gray;
             color: gray;
+          }
+          .comment_form--send-btn:hover{
+            color: #fff;
+            background-color: gray;
           }
         }
 

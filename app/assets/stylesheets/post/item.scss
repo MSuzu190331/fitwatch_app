@@ -33,6 +33,15 @@
   }
   .item-container.active {
     opacity: 1;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .item-container:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
