@@ -11,6 +11,7 @@ $(document).on('turbolinks:load',function(){
 });
 
 
+// title-logo animation
 function setup(){
   
   var $passage = $('.title_logo');
