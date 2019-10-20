@@ -7,7 +7,7 @@
           <div class="show_post_container--item-details">
             <div class="likes-comments">
               <div id="likes_buttons_<%= @post.id %>", class="likes_buttons">
-                <%= render partial: "likes/like", locals: { post: @post } %>
+                <%# <%= render partial: "likes/like", locals: { post: @post } %> %>
               </div>
               <div class="comments-buttons">
                 <i class="far fa-comment-dots"></i><%= @post.comments.count %>
