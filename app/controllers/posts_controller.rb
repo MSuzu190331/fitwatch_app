@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :authenticate_user!, only: [:show, :create]
+  before_action :authenticate_user!, only: [:show, :create]
   def index
     post_ids = Like.group(:post_id).order('count_post_id DESC').limit(5).count(:post_id).keys
     @posts = post_ids.map { |id| Post.find(id) }
