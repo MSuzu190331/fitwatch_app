@@ -14,7 +14,8 @@ class Post < ApplicationRecord
 
   def self.search(search)
     return Post.all unless search
-    Post.where(name_id: search)
+    Post.where(name_id: search) 
+    Post.where(['about LIKE ?', "%#{search}%"])
     # return Post.all unless search
     # Post.where(['name_id LIKE ?', "%#{search}%"])
   end

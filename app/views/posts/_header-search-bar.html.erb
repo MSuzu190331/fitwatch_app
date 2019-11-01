@@ -1,6 +1,16 @@
 <div class="search-bar">
-  <%= form_tag(search_posts_path, :method => 'get') do %>
-    <%= select_tag "search", options_for_select([["クラシック", 1],["フェミニン", 2],["カジュアル", 3],["シンプル", 4],["メンズライク", 5],["スポーティ", 6]]) %>
-    <%= submit_tag 'Search', :name => nil %>
-  <% end %>
+  <div class="select_search-bar">
+    <p>Category</p>
+    <%= form_tag(search_posts_path, :method => 'get') do %>
+      <%= select_tag "search", options_for_select([["クラシック", 1],["フェミニン", 2],["カジュアル", 3],["シンプル", 4],["メンズライク", 5],["スポーティ", 6]]) %>
+      <%= submit_tag 'Search', :name => nil %>
+    <% end %>
+  </div>
+  <div class="about_search-bar">
+    <p>About</p>
+    <%= form_tag(search_posts_path, :method => 'get') do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :name => nil %>
+    <% end %>
+  </div>
 </div>
